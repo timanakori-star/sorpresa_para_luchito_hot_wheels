@@ -50,7 +50,6 @@
             letter-spacing: 0.02em;
         }
 
-        /* Subtle Luxury Glow Effects */
         .glow-subtle {
             box-shadow: 0 0 30px rgba(255, 85, 0, 0.15), 0 0 60px rgba(229, 169, 60, 0.08);
         }
@@ -58,7 +57,6 @@
             text-shadow: 0 0 20px rgba(255, 85, 0, 0.4);
         }
 
-        /* Blister Toy Box Packaging Effect - Fine Luxury Edition */
         .blister-card {
             background: linear-gradient(145deg, #0e121a 0%, #151b27 50%, #0a0d14 100%);
             border: 1px solid rgba(255, 85, 0, 0.3);
@@ -72,7 +70,6 @@
             box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.05), 0 15px 35px rgba(0,0,0,0.5);
         }
 
-        /* SVG Track path animation */
         .track-path-bg {
             stroke: rgba(255, 255, 255, 0.06);
             stroke-dasharray: 6 6;
@@ -89,7 +86,6 @@
             to { stroke-dashoffset: 0; }
         }
 
-        /* Delicate custom scrollbar */
         ::-webkit-scrollbar {
             width: 5px;
         }
@@ -101,7 +97,6 @@
             border-radius: 10px;
         }
 
-        /* Soft Pulse for milestones */
         @keyframes softPulse {
             0%, 100% { transform: scale(1); filter: drop-shadow(0 0 6px rgba(255,85,0,0.5)); }
             50% { transform: scale(1.1); filter: drop-shadow(0 0 14px rgba(229,169,60,0.8)); }
@@ -110,7 +105,6 @@
             animation: softPulse 2.5s infinite ease-in-out;
         }
 
-        /* Smooth fade transitions */
         .page-transition {
             transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -127,7 +121,6 @@
         </div>
 
         <div class="flex items-center space-x-3">
-            <!-- Sleek Audio Player Toggle -->
             <button id="musicToggleBtn" onclick="toggleAudio()" class="flex items-center space-x-2 bg-hwGlass border border-white/15 hover:border-hwOrange/50 px-3.5 py-1.5 rounded-full text-xs font-light transition duration-300 shadow-sm hover:shadow-hwOrange/20">
                 <i id="musicIcon" class="fa-solid fa-music text-hwYellow text-xs"></i>
                 <span id="musicText" class="text-[11px] text-gray-300 font-light tracking-wide">Reproducir Canción</span>
@@ -135,25 +128,22 @@
         </div>
     </header>
 
-    <!-- HTML5 AUDIO PLAYER (Preloaded with user's audio track) -->
-    <audio id="bgAudio" loop preload="auto">
+    <!-- HTML5 AUDIO PLAYER con ID corregido y Autoplay -->
+    <audio id="bgMusic" loop preload="auto" autoplay>
         <source src="cancion.mp3" type="audio/mpeg">
         Tu navegador no soporta el reproductor de audio.
     </audio>
 
     <!-- MAIN COVER SCREEN -->
     <section id="screenCover" class="min-h-screen flex flex-col justify-center items-center px-4 pt-20 pb-12 text-center relative overflow-hidden page-transition">
-        <!-- Ambient Glowing Background Gradient -->
         <div class="absolute inset-0 z-0 opacity-25 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-hwOrange/40 via-hwDark to-transparent pointer-events-none"></div>
 
         <div class="z-10 max-w-lg mx-auto flex flex-col items-center">
             
-            <!-- Delicate Tagline Badge -->
             <span class="inline-block text-[11px] font-medium uppercase tracking-[0.25em] text-hwYellow bg-hwYellow/10 border border-hwYellow/20 px-4 py-1 rounded-full mb-6">
                 Un Detalle Especial • Temática Hot Wheels
             </span>
 
-            <!-- Main Typography Title -->
             <h1 class="font-serif text-3xl sm:text-5xl text-white uppercase tracking-widest leading-tight mb-2">
                 Our Love Has No
             </h1>
@@ -167,7 +157,6 @@
                 Hay caminos que se recorren sin saber a dónde nos llevan... pero desde que me subí al auto de tu vida, supe que no quiero volver a bajarme jamás.
             </p>
 
-            <!-- Sleek Ignition Button -->
             <button onclick="startJourney()" class="group relative inline-flex items-center justify-center px-7 py-3 text-xs uppercase tracking-widest text-white bg-gradient-to-r from-hwOrange/80 to-hwRed/80 hover:from-hwOrange hover:to-hwRed rounded-full border border-hwOrange/50 shadow-lg hover:shadow-hwOrange/30 transition-all duration-300 transform hover:-translate-y-0.5">
                 <i class="fa-solid fa-key mr-2.5 text-hwYellow text-xs group-hover:rotate-45 transition duration-300"></i>
                 <span>Encender Motor y Comenzar</span>
@@ -189,9 +178,7 @@
             <p class="text-xs text-gray-400 font-light mt-1.5 max-w-md mx-auto">Toca cada parada del circuito para avanzar hacia la sorpresa final</p>
         </div>
 
-        <!-- SVG Track Container -->
         <div class="relative w-full my-4 bg-hwGlass rounded-3xl p-4 sm:p-6 border border-white/10 shadow-2xl backdrop-blur-xl">
-            
             <svg viewBox="0 0 600 450" class="w-full h-auto overflow-visible">
                 <defs>
                     <linearGradient id="orange-gold-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -201,14 +188,11 @@
                     </linearGradient>
                 </defs>
 
-                <!-- Track SVG Line -->
                 <path d="M 100 80 Q 200 20 350 80 T 500 180 Q 550 300 380 340 T 150 320 Q 50 250 180 180 Z" 
                       fill="none" class="track-path-bg" stroke-width="10" stroke-linecap="round" />
                 <path d="M 100 80 Q 200 20 350 80 T 500 180 Q 550 300 380 340 T 150 320 Q 50 250 180 180 Z" 
                       fill="none" class="track-path-active" stroke-width="4" stroke-linecap="round" />
 
-                <!-- Milestone Nodes -->
-                <!-- Node 1 -->
                 <g transform="translate(100, 80)" class="cursor-pointer group" onclick="openMilestone(1)">
                     <circle r="18" class="fill-hwDark stroke-hwOrange stroke-2 group-hover:scale-110 transition duration-300" />
                     <circle r="12" class="fill-hwOrange pulse-node" />
@@ -216,7 +200,6 @@
                     <text y="32" text-anchor="middle" fill="#E5A93C" font-size="10" font-weight="500" class="font-sans">El Encendido</text>
                 </g>
 
-                <!-- Node 2 -->
                 <g transform="translate(480, 150)" class="cursor-pointer group" onclick="openMilestone(2)">
                     <circle r="18" class="fill-hwDark stroke-hwOrange stroke-2 group-hover:scale-110 transition duration-300" />
                     <circle r="12" id="node2Circle" class="fill-gray-700" />
@@ -224,7 +207,6 @@
                     <text y="32" text-anchor="middle" fill="#888" font-size="10" font-weight="500" id="node2Text">Curvas Fuertes</text>
                 </g>
 
-                <!-- Node 3 -->
                 <g transform="translate(400, 340)" class="cursor-pointer group" onclick="openMilestone(3)">
                     <circle r="18" class="fill-hwDark stroke-hwOrange stroke-2 group-hover:scale-110 transition duration-300" />
                     <circle r="12" id="node3Circle" class="fill-gray-700" />
@@ -232,7 +214,6 @@
                     <text y="32" text-anchor="middle" fill="#888" font-size="10" font-weight="500" id="node3Text">Nitrógeno & Risas</text>
                 </g>
 
-                <!-- Node 4 -->
                 <g transform="translate(140, 310)" class="cursor-pointer group" onclick="openMilestone(4)">
                     <circle r="18" class="fill-hwDark stroke-hwOrange stroke-2 group-hover:scale-110 transition duration-300" />
                     <circle r="12" id="node4Circle" class="fill-gray-700" />
@@ -240,7 +221,6 @@
                     <text y="32" text-anchor="middle" fill="#888" font-size="10" font-weight="500" id="node4Text">Refugio Seguro</text>
                 </g>
 
-                <!-- Node 5 -->
                 <g transform="translate(180, 180)" class="cursor-pointer group" onclick="openMilestone(5)">
                     <circle r="22" class="fill-hwDark stroke-hwYellow stroke-2 group-hover:scale-110 transition duration-300" />
                     <circle r="15" id="node5Circle" class="fill-hwRed" />
@@ -248,7 +228,6 @@
                     <text y="36" text-anchor="middle" fill="#FF5500" font-size="10" font-weight="600">Carta 1/1</text>
                 </g>
 
-                <!-- Animated Toy Car -->
                 <g id="hotwheelsCar" transform="translate(100, 80)" class="transition-all duration-1000 ease-in-out pointer-events-none">
                     <rect x="-14" y="-8" width="28" height="16" rx="4" fill="#D32F2F" stroke="#E5A93C" stroke-width="1" />
                     <rect x="-6" y="-5" width="12" height="10" rx="2" fill="#111" />
@@ -305,10 +284,8 @@
     <!-- SCREEN 3: BLISTER PACKAGE & DEEP EMOTIONAL LETTER -->
     <section id="screenLetter" class="hidden min-h-screen pt-20 pb-16 px-4 flex flex-col justify-center items-center relative z-10 max-w-2xl mx-auto page-transition">
         
-        <!-- Hot Wheels Blister Package Box -->
         <div id="blisterPackaging" class="blister-card w-full rounded-2xl p-5 sm:p-7 relative overflow-hidden transition-all duration-700">
             
-            <!-- Packaging Header -->
             <div class="flex justify-between items-start border-b border-white/10 pb-4 mb-5">
                 <div>
                     <div class="flex items-center space-x-2">
@@ -324,10 +301,8 @@
                 </div>
             </div>
 
-            <!-- Diecast Plastic Bubble with Toggleable Couple Photos -->
             <div class="plastic-bubble rounded-xl p-4 mb-5 flex flex-col md:flex-row items-center gap-5 relative">
                 
-                <!-- Couple Photo Display Card -->
                 <div class="relative group w-48 h-48 sm:w-52 sm:h-52 shrink-0 rounded-xl overflow-hidden border border-white/20 shadow-2xl bg-black/60">
                     <img id="couplePhoto" src="WhatsApp Image 2026-09-30 at 08.19.22 (1).jpeg" 
                          alt="Foto juntos con Luchito" class="w-full h-full object-cover transition duration-700 group-hover:scale-105" 
@@ -339,14 +314,12 @@
                         </span>
                     </div>
 
-                    <!-- Photo Switcher Pill -->
                     <button onclick="togglePhoto()" title="Cambiar a la otra foto" class="absolute top-2 right-2 bg-black/70 hover:bg-hwOrange text-white text-[10px] px-2.5 py-1 rounded-full border border-white/20 transition duration-300 backdrop-blur-md flex items-center space-x-1">
                         <i class="fa-solid fa-images text-[9px]"></i>
                         <span>Ver Otra Foto</span>
                     </button>
                 </div>
 
-                <!-- Diecast Specs Info -->
                 <div class="flex-1 text-left space-y-2">
                     <span class="bg-hwRed/20 text-hwRed border border-hwRed/40 text-[9px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full">Modelo Exclusivo</span>
                     <h3 class="font-serif text-lg text-hwYellow tracking-wide">El Amor de Mi Vida</h3>
@@ -359,7 +332,6 @@
                 </div>
             </div>
 
-            <!-- Unboxing Trigger Button -->
             <div id="unboxingCoverBtn" class="text-center py-2">
                 <button onclick="openLetterUnboxing()" class="w-full py-3 px-6 bg-gradient-to-r from-hwOrange/90 via-hwRed/90 to-hwOrange/90 font-sans text-xs uppercase tracking-widest text-white rounded-xl shadow-lg hover:shadow-hwOrange/30 hover:scale-[1.01] transition duration-300 border border-hwOrange/40 flex items-center justify-center">
                     <i class="fa-solid fa-envelope-open mr-2.5 text-hwYellow"></i>
@@ -368,7 +340,6 @@
                 <p class="text-[10px] text-gray-400 mt-2 font-light">Haz clic para desplegar la carta sentimental</p>
             </div>
 
-            <!-- THE DEEP EMOTIONAL LETTER -->
             <div id="deepEmotionalLetter" class="hidden mt-6 bg-[#fcfaf7] text-gray-800 rounded-xl p-6 sm:p-9 shadow-2xl relative border border-hwYellow/40 leading-relaxed font-sans">
                 
                 <div class="border-b border-gray-200 pb-3 mb-5 flex justify-between items-end">
@@ -379,7 +350,6 @@
                     <i class="fa-solid fa-heart text-hwRed/20 text-3xl"></i>
                 </div>
 
-                <!-- Deep Emotional Letter Body -->
                 <div class="space-y-4 text-xs sm:text-sm text-gray-700 font-light leading-relaxed">
                     <p>
                         A veces me detengo un segundo a mirarte cuando estás distraído, cuando te ríes sin darte cuenta o cuando me tomas de la mano con esa seguridad tan tuya. Y en ese instante, en silencio, le doy las gracias a la vida por haber cruzado nuestros caminos.
@@ -432,7 +402,6 @@
     </footer>
 
     <script>
-        // ORIGINAL MILESTONES DATA
         const milestones = {
             1: {
                 badge: "PARADA 1",
@@ -447,7 +416,7 @@
                 sub: "Superando Curvas",
                 title: "Curvas Fuertes y Aprendizaje",
                 quote: "«El verdadero amor no frena en la lluvia; aprende a agarrarse más fuerte juntos.»",
-                body: "No todo en la vida es una pista recta. Hemos tenido días difíciles y curvas cerradas, pero lo más lindo de todo ha sido descubrir que, no importa qué tan fuerte sople el viento, siempre elegimos tomarnos de la mano y continuar.",
+                body: "No todo en la vida es una pista recta. Hemos tenido días difíciles y curvas cerradas, pero lo más lindo de todo ha sido descubrir que, no importar qué tan fuerte sople el viento, siempre elegimos tomarnos de la mano y continuar.",
                 x: 480, y: 150
             },
             3: {
@@ -476,7 +445,6 @@
             }
         };
 
-        // Switch between photo 1 and photo 2 from the conversation
         const photoList = [
             {
                 src: "WhatsApp Image 2026-09-30 at 08.19.22 (1).jpeg",
@@ -505,7 +473,6 @@
         let currentStep = 1;
         let isAudioPlaying = false;
 
-        // Sound FXsynth
         function playEngineSound() {
             try {
                 const AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -653,21 +620,40 @@
             const musicText = document.getElementById('musicText');
             const musicIcon = document.getElementById('musicIcon');
 
+            if (!audio) return;
+
             if (forcePlay || audio.paused) {
                 audio.play().then(() => {
                     isAudioPlaying = true;
-                    musicText.innerText = "Canción Sonando ❤️";
-                    musicIcon.classList.add('fa-spin');
+                    if (musicText) musicText.innerText = "Canción Sonando ❤️";
+                    if (musicIcon) musicIcon.classList.add('fa-spin');
                 }).catch(e => {
-                    console.log("Audio waiting for user click");
+                    console.log("Esperando interacción del usuario para reproducir audio");
                 });
             } else {
                 audio.pause();
                 isAudioPlaying = false;
-                musicText.innerText = "Reproducir Canción";
-                musicIcon.classList.remove('fa-spin');
+                if (musicText) musicText.innerText = "Reproducir Canción";
+                if (musicIcon) musicIcon.classList.remove('fa-spin');
             }
         }
+
+        // AUTO-REPRODUCCIÓN AL ABRIR EL ENLACE O AL PRIMER CLIC
+        window.addEventListener('DOMContentLoaded', () => {
+            toggleAudio(true);
+
+            const enableAudioOnUserInteraction = () => {
+                const audio = document.getElementById('bgMusic');
+                if (audio && audio.paused) {
+                    toggleAudio(true);
+                }
+                window.removeEventListener('click', enableAudioOnUserInteraction);
+                window.removeEventListener('touchstart', enableAudioOnUserInteraction);
+            };
+
+            window.addEventListener('click', enableAudioOnUserInteraction);
+            window.addEventListener('touchstart', enableAudioOnUserInteraction);
+        });
     </script>
 </body>
 </html>
